@@ -38,6 +38,11 @@ Development
     ## Run tests
     ./venv/bin/pytest tests/
 
+    ## Distribute
+    ## Make sure credentials are stored under ~/.pypirc
+    python -m build
+    twine upload --repository pypi dist/*
+
 Licence = MIT
 -------------
 
