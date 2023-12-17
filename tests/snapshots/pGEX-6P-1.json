@@ -1,0 +1,425 @@
+{
+    "isDNA": 1,
+    "exportVersion": 15,
+    "importVersion": 19,
+    "features": [
+        {
+            "start": 939,
+            "end": 981,
+            "strand": ".",
+            "type": "misc_feature",
+            "name": "MCS",
+            "color": "#99ccff",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "940-981",
+                    "@color": "#99ccff",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "note": [
+                    "multiple cloning site",
+                    "color: #99ccff"
+                ],
+                "label": "MCS"
+            }
+        },
+        {
+            "start": 917,
+            "end": 941,
+            "strand": "+",
+            "type": "CDS",
+            "name": "PreScission site",
+            "color": "#cc99b2",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "918-941",
+                    "@color": "#cc99b2",
+                    "@type": "standard",
+                    "@translated": "1"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "codon_start": 1,
+                "product": "recognition and cleavage site for human rhinovirus 3C and PreScission proteases",
+                "transl_table": 1,
+                "translation": "LEVLFQGP",
+                "label": "PreScission site",
+                "note": [
+                    "color: #cc99b2"
+                ]
+            }
+        },
+        {
+            "start": 3332,
+            "end": 4415,
+            "strand": "+",
+            "type": "CDS",
+            "name": "lacI",
+            "color": "#993366",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "3333-4415",
+                    "@color": "#993366",
+                    "@type": "standard",
+                    "@translated": "1"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "codon_start": 1,
+                "gene": "lacI",
+                "note": [
+                    "The lac repressor binds to the lac operator to inhibit transcription in E. coli. This inhibition can be relieved by adding lactose or isopropyl-β-D-thiogalactopyranoside (IPTG).",
+                    "color: #993366"
+                ],
+                "product": "lac repressor",
+                "transl_table": 1,
+                "translation": "VKPVTLYDVAEYAGVSYQTVSRVVNQASHVSAKTREKVEAAMAELNYIPNRVAQQLAGKQSLLIGVATSSLALHAPSQIVAAIKSRADQLGASVVVSMVERSGVEACKAAVHNLLAQRVSGLIINYPLDDQDAIAVEAACTNVPALFLDVSDQTPINSIIFSHEDGTRLGVEHLVALGHQQIALLAGPLSSVSARLRLAGWHKYLTRNQIQPIAEREGDWSAMSGFQQTMQMLNEGIVPTAMLVANDQMALGAMRAITESGLRVGADISVVGYDDTEDSSCYIPPSTTIKQDFRLLGQTSVDRLLQLSQGQAVKGNQLLPVSLVKRKTTLAPNTQTASPRALADSLMQLARQVSRLESGQ*",
+                "label": "lacI"
+            }
+        },
+        {
+            "start": 1391,
+            "end": 2252,
+            "strand": "+",
+            "type": "CDS",
+            "name": "AmpR",
+            "color": "#ccffcc",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@name": "signal sequence",
+                    "@range": "1392-1460",
+                    "@color": "#ccffcc",
+                    "@type": "standard",
+                    "@translated": "1"
+                },
+                {
+                    "@range": "1461-2252",
+                    "@color": "#ccffcc",
+                    "@type": "standard",
+                    "@translated": "1"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "codon_start": 1,
+                "gene": "bla",
+                "note": [
+                    "confers resistance to ampicillin, carbenicillin, and related antibiotics",
+                    "color: #ccffcc"
+                ],
+                "product": "β-lactamase",
+                "transl_table": 1,
+                "translation": "MSIQHFRVALIPFFAAFCLPVFA,HPETLVKVKDAEDQLGARVGYIELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRVDAGQEQLGRRIHYSQNDLVEYSPVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRWEPELNEAIPNDERDTTMPAAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSALPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGASLIKHW*",
+                "label": "AmpR"
+            }
+        },
+        {
+            "start": 257,
+            "end": 911,
+            "strand": "+",
+            "type": "CDS",
+            "name": "GST",
+            "color": "#cc99b2",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "258-911",
+                    "@color": "#cc99b2",
+                    "@type": "standard",
+                    "@translated": "1"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "codon_start": 1,
+                "gene": "",
+                "product": "glutathione S-transferase from Schistosoma japonicum",
+                "transl_table": 1,
+                "translation": "MSPILGYWKIKGLVQPTRLLLEYLEEKYEEHLYERDEGDKWRNKKFELGLEFPNLPYYIDGDVKLTQSMAIIRYIADKHNMLGGCPKERAEISMLEGAVLDIRYGVSRIAYSKDFETLKVDFLSKLPEMLKMFEDRLCHKTYLNGDHVTHPDFMLYDALDVVLYMDPMCLDAFPKLVCFKKRIEAIPQIDKYLKSSKYIAWPLQGWQATFGGGDHPPK",
+                "label": "GST",
+                "note": [
+                    "color: #cc99b2"
+                ]
+            }
+        },
+        {
+            "start": 2422,
+            "end": 3011,
+            "strand": "+",
+            "type": "rep_origin",
+            "name": "ori",
+            "color": "#ffff00",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "2423-3011",
+                    "@color": "#ffff00",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "direction": "RIGHT",
+                "note": [
+                    "high-copy-number ColE1/pMB1/pBR322/pUC origin of replication",
+                    "color: #ffff00"
+                ],
+                "label": "ori"
+            }
+        },
+        {
+            "start": 1286,
+            "end": 1391,
+            "strand": "+",
+            "type": "promoter",
+            "name": "AmpR promoter",
+            "color": "#ffffff",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "1287-1391",
+                    "@color": "#ffffff",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "gene": "bla",
+                "label": "AmpR promoter",
+                "note": [
+                    "color: #ffffff"
+                ]
+            }
+        },
+        {
+            "start": 3254,
+            "end": 3332,
+            "strand": "+",
+            "type": "promoter",
+            "name": "lacIq promoter",
+            "color": "#ffffff",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "3255-3332",
+                    "@color": "#ffffff",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "gene": "lacI (mutant)",
+                "note": [
+                    "In the lacIq allele, a single base change in the promoter boosts expression of the lacI gene about 10-fold.",
+                    "color: #ffffff"
+                ],
+                "label": "lacIq promoter"
+            }
+        },
+        {
+            "start": 182,
+            "end": 211,
+            "strand": "+",
+            "type": "misc_feature",
+            "name": "tac promoter",
+            "color": "#ffffff",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@name": "-35",
+                    "@range": "183-188",
+                    "@color": "#ffffff",
+                    "@type": "standard"
+                },
+                {
+                    "@range": "189-204",
+                    "@color": "#ffffff",
+                    "@type": "standard"
+                },
+                {
+                    "@name": "-10",
+                    "@range": "205-211",
+                    "@color": "#ffffff",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "note": [
+                    "strong E. coli promoter; hybrid between the trp and lac UV5 promoters",
+                    "color: #ffffff"
+                ],
+                "label": "tac promoter"
+            }
+        },
+        {
+            "start": 218,
+            "end": 235,
+            "strand": ".",
+            "type": "protein_bind",
+            "name": "lac operator",
+            "color": "#31849b",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "219-235",
+                    "@color": "#31849b",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "bound_moiety": "lac repressor encoded by lacI",
+                "note": [
+                    "The lac repressor binds to the lac operator to inhibit transcription in E. coli. This inhibition can be relieved by adding lactose or isopropyl-β-D-thiogalactopyranoside (IPTG).",
+                    "color: #31849b"
+                ],
+                "label": "lac operator"
+            }
+        },
+        {
+            "start": 985,
+            "end": 996,
+            "strand": ".",
+            "type": "misc_feature",
+            "name": "stop codons",
+            "color": "#ff0000",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "986-996",
+                    "@color": "#ff0000",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "note": [
+                    "stop codons in all three reading frames",
+                    "color: #ff0000"
+                ],
+                "label": "stop codons"
+            }
+        }
+    ],
+    "dna": {
+        "topology": "circular",
+        "strandedness": "double",
+        "damMethylated": true,
+        "dcmMethylated": true,
+        "ecoKIMethylated": true,
+        "length": 4984
+    },
+    "seq": "ACGTTATCGACTGCACGGTGCACCAATGCTTCTGGCGTCAGGCAGCCATCGGAAGCTGTGGTATGGCTGTGCAGGTCGTAAATCACTGCATAATTCGTGTCGCTCAAGGCGCACTCCCGTTCTGGATAATGTTTTTTGCGCCGACATCATAACGGTTCTGGCAAATATTCTGAAATGAGCTGTTGACAATTAATCATCGGCTCGTATAATGTGTGGAATTGTGAGCGGATAACAATTTCACACAGGAAACAGTATTCATGTCCCCTATACTAGGTTATTGGAAAATTAAGGGCCTTGTGCAACCCACTCGACTTCTTTTGGAATATCTTGAAGAAAAATATGAAGAGCATTTGTATGAGCGCGATGAAGGTGATAAATGGCGAAACAAAAAGTTTGAATTGGGTTTGGAGTTTCCCAATCTTCCTTATTATATTGATGGTGATGTTAAATTAACACAGTCTATGGCCATCATACGTTATATAGCTGACAAGCACAACATGTTGGGTGGTTGTCCAAAAGAGCGTGCAGAGATTTCAATGCTTGAAGGAGCGGTTTTGGATATTAGATACGGTGTTTCGAGAATTGCATATAGTAAAGACTTTGAAACTCTCAAAGTTGATTTTCTTAGCAAGCTACCTGAAATGCTGAAAATGTTCGAAGATCGTTTATGTCATAAAACATATTTAAATGGTGATCATGTAACCCATCCTGACTTCATGTTGTATGACGCTCTTGATGTTGTTTTATACATGGACCCAATGTGCCTGGATGCGTTCCCAAAATTAGTTTGTTTTAAAAAACGTATTGAAGCTATCCCACAAATTGATAAGTACTTGAAATCCAGCAAGTATATAGCATGGCCTTTGCAGGGCTGGCAAGCCACGTTTGGTGGTGGCGACCATCCTCCAAAATCGGATCTGGAAGTTCTGTTCCAGGGGCCCCTGGGATCCCCGGAATTCCCGGGTCGACTCGAGCGGCCGCATCGTGACTGACTGACGATCTGCCTCGCGCGTTTCGGTGATGACGGTGAAAACCTCTGACACATGCAGCTCCCGGAGACGGTCACAGCTTGTCTGTAAGCGGATGCCGGGAGCAGACAAGCCCGTCAGGGCGCGTCAGCGGGTGTTGGCGGGTGTCGGGGCGCAGCCATGACCCAGTCACGTAGCGATAGCGGAGTGTATAATTCTTGAAGACGAAAGGGCCTCGTGATACGCCTATTTTTATAGGTTAATGTCATGATAATAATGGTTTCTTAGACGTCAGGTGGCACTTTTCGGGGAAATGTGCGCGGAACCCCTATTTGTTTATTTTTCTAAATACATTCAAATATGTATCCGCTCATGAGACAATAACCCTGATAAATGCTTCAATAATATTGAAAAAGGAAGAGTATGAGTATTCAACATTTCCGTGTCGCCCTTATTCCCTTTTTTGCGGCATTTTGCCTTCCTGTTTTTGCTCACCCAGAAACGCTGGTGAAAGTAAAAGATGCTGAAGATCAGTTGGGTGCACGAGTGGGTTACATCGAACTGGATCTCAACAGCGGTAAGATCCTTGAGAGTTTTCGCCCCGAAGAACGTTTTCCAATGATGAGCACTTTTAAAGTTCTGCTATGTGGCGCGGTATTATCCCGTGTTGACGCCGGGCAAGAGCAACTCGGTCGCCGCATACACTATTCTCAGAATGACTTGGTTGAGTACTCACCAGTCACAGAAAAGCATCTTACGGATGGCATGACAGTAAGAGAATTATGCAGTGCTGCCATAACCATGAGTGATAACACTGCGGCCAACTTACTTCTGACAACGATCGGAGGACCGAAGGAGCTAACCGCTTTTTTGCACAACATGGGGGATCATGTAACTCGCCTTGATCGTTGGGAACCGGAGCTGAATGAAGCCATACCAAACGACGAGCGTGACACCACGATGCCTGCAGCAATGGCAACAACGTTGCGCAAACTATTAACTGGCGAACTACTTACTCTAGCTTCCCGGCAACAATTAATAGACTGGATGGAGGCGGATAAAGTTGCAGGACCACTTCTGCGCTCGGCCCTTCCGGCTGGCTGGTTTATTGCTGATAAATCTGGAGCCGGTGAGCGTGGGTCTCGCGGTATCATTGCAGCACTGGGGCCAGATGGTAAGCCCTCCCGTATCGTAGTTATCTACACGACGGGGAGTCAGGCAACTATGGATGAACGAAATAGACAGATCGCTGAGATAGGTGCCTCACTGATTAAGCATTGGTAACTGTCAGACCAAGTTTACTCATATATACTTTAGATTGATTTAAAACTTCATTTTTAATTTAAAAGGATCTAGGTGAAGATCCTTTTTGATAATCTCATGACCAAAATCCCTTAACGTGAGTTTTCGTTCCACTGAGCGTCAGACCCCGTAGAAAAGATCAAAGGATCTTCTTGAGATCCTTTTTTTCTGCGCGTAATCTGCTGCTTGCAAACAAAAAAACCACCGCTACCAGCGGTGGTTTGTTTGCCGGATCAAGAGCTACCAACTCTTTTTCCGAAGGTAACTGGCTTCAGCAGAGCGCAGATACCAAATACTGTCCTTCTAGTGTAGCCGTAGTTAGGCCACCACTTCAAGAACTCTGTAGCACCGCCTACATACCTCGCTCTGCTAATCCTGTTACCAGTGGCTGCTGCCAGTGGCGATAAGTCGTGTCTTACCGGGTTGGACTCAAGACGATAGTTACCGGATAAGGCGCAGCGGTCGGGCTGAACGGGGGGTTCGTGCACACAGCCCAGCTTGGAGCGAACGACCTACACCGAACTGAGATACCTACAGCGTGAGCTATGAGAAAGCGCCACGCTTCCCGAAGGGAGAAAGGCGGACAGGTATCCGGTAAGCGGCAGGGTCGGAACAGGAGAGCGCACGAGGGAGCTTCCAGGGGGAAACGCCTGGTATCTTTATAGTCCTGTCGGGTTTCGCCACCTCTGACTTGAGCGTCGATTTTTGTGATGCTCGTCAGGGGGGCGGAGCCTATGGAAAAACGCCAGCAACGCGGCCTTTTTACGGTTCCTGGCCTTTTGCTGGCCTTTTGCTCACATGTTCTTTCCTGCGTTATCCCCTGATTCTGTGGATAACCGTATTACCGCCTTTGAGTGAGCTGATACCGCTCGCCGCAGCCGAACGACCGAGCGCAGCGAGTCAGTGAGCGAGGAAGCGGAAGAGCGCCTGATGCGGTATTTTCTCCTTACGCATCTGTGCGGTATTTCACACCGCATAAATTCCGACACCATCGAATGGTGCAAAACCTTTCGCGGTATGGCATGATAGCGCCCGGAAGAGAGTCAATTCAGGGTGGTGAATGTGAAACCAGTAACGTTATACGATGTCGCAGAGTATGCCGGTGTCTCTTATCAGACCGTTTCCCGCGTGGTGAACCAGGCCAGCCACGTTTCTGCGAAAACGCGGGAAAAAGTGGAAGCGGCGATGGCGGAGCTGAATTACATTCCCAACCGCGTGGCACAACAACTGGCGGGCAAACAGTCGTTGCTGATTGGCGTTGCCACCTCCAGTCTGGCCCTGCACGCGCCGTCGCAAATTGTCGCGGCGATTAAATCTCGCGCCGATCAACTGGGTGCCAGCGTGGTGGTGTCGATGGTAGAACGAAGCGGCGTCGAAGCCTGTAAAGCGGCGGTGCACAATCTTCTCGCGCAACGCGTCAGTGGGCTGATCATTAACTATCCGCTGGATGACCAGGATGCCATTGCTGTGGAAGCTGCCTGCACTAATGTTCCGGCGTTATTTCTTGATGTCTCTGACCAGACACCCATCAACAGTATTATTTTCTCCCATGAAGACGGTACGCGACTGGGCGTGGAGCATCTGGTCGCATTGGGTCACCAGCAAATCGCGCTGTTAGCGGGCCCATTAAGTTCTGTCTCGGCGCGTCTGCGTCTGGCTGGCTGGCATAAATATCTCACTCGCAATCAAATTCAGCCGATAGCGGAACGGGAAGGCGACTGGAGTGCCATGTCCGGTTTTCAACAAACCATGCAAATGCTGAATGAGGGCATCGTTCCCACTGCGATGCTGGTTGCCAACGATCAGATGGCGCTGGGCGCAATGCGCGCCATTACCGAGTCCGGGCTGCGCGTTGGTGCGGATATCTCGGTAGTGGGATACGACGATACCGAAGACAGCTCATGTTATATCCCGCCGTCAACCACCATCAAACAGGATTTTCGCCTGCTGGGGCAAACCAGCGTGGACCGCTTGCTGCAACTCTCTCAGGGCCAGGCGGTGAAGGGCAATCAGCTGTTGCCCGTCTCACTGGTGAAAAGAAAAACCACCCTGGCGCCCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATGCAGCTGGCACGACAGGTTTCCCGACTGGAAAGCGGGCAGTGAGCGCAACGCAATTAATGTGAGTTAGCTCACTCATTAGGCACCCCAGGCTTTACACTTTATGCTTCCGGCTCGTATGTTGTGTGGAATTGTGAGCGGATAACAATTTCACACAGGAAACAGCTATGACCATGATTACGGATTCACTGGCCGTCGTTTTACAACGTCGTGACTGGGAAAACCCTGGCGTTACCCAACTTAATCGCCTTGCAGCACATCCCCCTTTCGCCAGCTGGCGTAATAGCGAAGAGGCCCGCACCGATCGCCCTTCCCAACAGTTGCGCAGCCTGAATGGCGAATGGCGCTTTGCCTGGTTTCCGGCACCAGAAGCGGTGCCGGAAAGCTGGCTGGAGTGCGATCTTCCTGAGGCCGATACTGTCGTCGTCCCCTCAAACTGGCAGATGCACGGTTACGATGCGCCCATCTACACCAACGTAACCTATCCCATTACGGTCAATCCGCCGTTTGTTCCCACGGAGAATCCGACGGGTTGTTACTCGCTCACATTTAATGTTGATGAAAGCTGGCTACAGGAAGGCCAGACGCGAATTATTTTTGATGGCGTTGGAATT",
+    "primers": {
+        "@nextValidID": "2",
+        "HybridizationParams": {
+            "@minContinuousMatchLen": "10",
+            "@allowMismatch": "1",
+            "@minMeltingTemperature": "40",
+            "@showAdditionalFivePrimeMatches": "1",
+            "@minimumFivePrimeAnnealing": "15"
+        },
+        "Primer": [
+            {
+                "@recentID": "0",
+                "@name": "pGEX 3' Sequencing Primer",
+                "@sequence": "CCGGGAGCTGCATGTGTCAGAGG",
+                "@description": "<html><body></body></html>",
+                "BindingSite": [
+                    {
+                        "@location": "1033-1055",
+                        "@boundStrand": "1",
+                        "@annealedBases": "CCGGGAGCTGCATGTGTCAGAGG",
+                        "@meltingTemperature": "66",
+                        "Component": {
+                            "@hybridizedRange": "1033-1055",
+                            "@bases": "CCGGGAGCTGCATGTGTCAGAGG"
+                        }
+                    },
+                    {
+                        "@simplified": "1",
+                        "@location": "1033-1055",
+                        "@boundStrand": "1",
+                        "@annealedBases": "CCGGGAGCTGCATGTGTCAGAGG",
+                        "@meltingTemperature": "66",
+                        "Component": {
+                            "@hybridizedRange": "1033-1055",
+                            "@bases": "CCGGGAGCTGCATGTGTCAGAGG"
+                        }
+                    }
+                ]
+            },
+            {
+                "@recentID": "1",
+                "@name": "pGEX 5' Sequencing Primer",
+                "@sequence": "GGGCTGGCAAGCCACGTTTGGTG",
+                "@description": "<html><body></body></html>",
+                "BindingSite": [
+                    {
+                        "@location": "868-890",
+                        "@boundStrand": "0",
+                        "@annealedBases": "GGGCTGGCAAGCCACGTTTGGTG",
+                        "@meltingTemperature": "66",
+                        "Component": {
+                            "@hybridizedRange": "868-890",
+                            "@bases": "GGGCTGGCAAGCCACGTTTGGTG"
+                        }
+                    },
+                    {
+                        "@simplified": "1",
+                        "@location": "868-890",
+                        "@boundStrand": "0",
+                        "@annealedBases": "GGGCTGGCAAGCCACGTTTGGTG",
+                        "@meltingTemperature": "66",
+                        "Component": {
+                            "@hybridizedRange": "868-890",
+                            "@bases": "GGGCTGGCAAGCCACGTTTGGTG"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "notes": {
+        "UUID": "1a2f2912-2da4-450c-9c99-568e9d162ef0",
+        "Type": "Synthetic",
+        "ConfirmedExperimentally": "0",
+        "CustomMapLabel": "pGEX-6P-1",
+        "UseCustomMapLabel": "1",
+        "Description": "Bacterial vector for expressing GST fusion proteins with a PreScission protease site. For other reading frames, use pGEX-6P-2 or pGEX-6P-3.",
+        "Created": {
+            "@UTC": "6:0:0",
+            "#text": "1996.12.3"
+        },
+        "LastModified": {
+            "@UTC": "6:0:0",
+            "#text": "2013.12.3"
+        },
+        "AccessionNumber": "U78872",
+        "CreatedBy": "GE Healthcare",
+        "Organism": "Escherichia coli",
+        "SequenceClass": "UNA",
+        "TransformedInto": "Unspecified"
+    }
+}
