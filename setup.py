@@ -2,13 +2,13 @@
 setup.py
 install snapgene_reader by pip
 """
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
-    name="snapgene_reader",
-    version="0.1.20",
-    author="yishaluo",
-    maintainer="EdinburghGenomeFoundry",
+    name="snapgene_utils",
+    version="0.2.0",
+    author="poeticpete",
+    maintainer="petertao",
     description="Convert Snapgene *.dna files dict/json/biopython.",
     long_description=open("README.rst").read(),
     license="MIT",
