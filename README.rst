@@ -40,6 +40,8 @@ Development
 
     ## Distribute
     ## Make sure credentials are stored under ~/.pypirc
+    git tag <version>
+    git push origin --tags
     python -m build
     twine upload --repository pypi dist/*
 
