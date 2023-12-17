@@ -1,0 +1,90 @@
+{
+    "isDNA": 1,
+    "exportVersion": 15,
+    "importVersion": 19,
+    "features": [
+        {
+            "start": 0,
+            "end": 720,
+            "strand": "+",
+            "type": "CDS",
+            "name": "AcGFP1",
+            "color": "#05fd14",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "1-720",
+                    "@color": "#05fd14",
+                    "@type": "standard",
+                    "@translated": "1"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "codon_start": 1,
+                "note": [
+                    "mammalian codon-optimized",
+                    "color: #05fd14"
+                ],
+                "product": "Aequorea coerulescens GFP",
+                "transl_table": 1,
+                "translation": "MVSKGAELFTGIVPILIELNGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYIQERTIFFEDDGNYKSRAEVKFEGDTLVNRIELTGTDFKEDGNILGNKMEYNYNAHNVYIMTDKAKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMIYFGFVTAAAITHGMDELYK*",
+                "label": "AcGFP1"
+            }
+        },
+        {
+            "start": 616,
+            "end": 655,
+            "strand": ".",
+            "type": "misc_feature",
+            "name": "Test Feature",
+            "color": "#a6acb3",
+            "textColor": "black",
+            "segments": [
+                {
+                    "@range": "617-655",
+                    "@color": "#a6acb3",
+                    "@type": "standard"
+                }
+            ],
+            "row": 0,
+            "isOrf": false,
+            "qualifiers": {
+                "label": "Test Feature",
+                "note": [
+                    "color: #a6acb3"
+                ]
+            }
+        }
+    ],
+    "dna": {
+        "topology": "linear",
+        "strandedness": "double",
+        "damMethylated": false,
+        "dcmMethylated": false,
+        "ecoKIMethylated": false,
+        "length": 720
+    },
+    "seq": "ATGGTGAGCAAGGGCGCCGAGCTGTTCACCGGCATCGTGCCCATCCTGATCGAGCTGAATGGCGATGTGAATGGCCACAAGTTCAGCGTGAGCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACCGGCAAGCTGCCTGTGCCCTGGCCCACCCTGGTGACCACCCTGAGCTACGGCGTGCAGTGCTTCTCACGCTACCCCGATCACATGAAGCAGCACGACTTCTTCAAGAGCGCCATGCCTGAGGGCTACATCCAGGAGCGCACCATCTTCTTCGAGGATGACGGCAACTACAAGTCGCGCGCCGAGGTGAAGTTCGAGGGCGATACCCTGGTGAATCGCATCGAGCTGACCGGCACCGATTTCAAGGAGGATGGCAACATCCTGGGCAATAAGATGGAGTACAACTACAACGCCCACAATGTGTACATCATGACCGACAAGGCCAAGAATGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGATGGCAGCGTGCAGCTGGCCGACCACTACCAGCAGAATACCCCCATCGGCGATGGCCCTGTGCTGCTGCCCGATAACCACTACCTGTCCACCCAGAGCGCCCTGTCCAAGGACCCCAACGAGAAGCGCGATCACATGATCTACTTCGGCTTCGTGACCGCCGCCGCCATCACCCACGGCATGGATGAGCTGTACAAGTGA",
+    "notes": {
+        "UUID": "12043859-7888-4c2d-99ad-f5cd13d42dae",
+        "Type": "Synthetic",
+        "ConfirmedExperimentally": "0",
+        "CustomMapLabel": "AcGFP1",
+        "UseCustomMapLabel": "1",
+        "Description": "Aequorea coerulescens green fluorescent protein.",
+        "Created": {
+            "@UTC": "5:0:0",
+            "#text": "2012.5.2"
+        },
+        "LastModified": {
+            "@UTC": "21:19:45",
+            "#text": "2023.12.16"
+        },
+        "CreatedBy": "Clontech (TaKaRa)",
+        "SequenceClass": "UNA",
+        "TransformedInto": "Unspecified",
+        "Comments": "Mammalian codon-optimized."
+    }
+}

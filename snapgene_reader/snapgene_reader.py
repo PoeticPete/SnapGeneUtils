@@ -5,7 +5,6 @@ import struct
 
 # import json
 import xmltodict
-
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 
@@ -17,8 +16,8 @@ try:
 except ImportError:
     # Biopython >=1.78
     has_dna_alphabet = False
-from Bio.SeqFeature import SeqFeature, FeatureLocation
 import html2text
+from Bio.SeqFeature import FeatureLocation, SeqFeature
 
 HTML_PARSER = html2text.HTML2Text()
 HTML_PARSER.ignore_emphasis = True

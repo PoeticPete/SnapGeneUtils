@@ -1,3 +1,4 @@
+import json
 import os
 
 from Bio import SeqIO
@@ -5,9 +6,12 @@ from Bio import SeqIO
 from snapgene_reader import snapgene_file_to_dict
 
 TEST_DIR = os.path.join("tests", "test_samples")
+SNAPSHOT_DIR = os.path.join("tests", "snapshots")
 
-
-def test_snapgene_file_to_seqrecord(tmpdir):
-    TEST_FILE = os.path.join(TEST_DIR, "AcGFP1.dna")
-    d = snapgene_file_to_dict(TEST_FILE)
-    print(d)
+def test_snapgene_file_to_dict(tmpdir):
+    test_file = os.path.join(TEST_DIR, "AcGFP1.dna")
+    snapshot_file = os.path.join(SNAPSHOT_DIR, "AcGFP1.json")
+    file_dict = snapgene_file_to_dict(test_file)
+    with open(snapshot_file) as f:
+        snapshot = json.loads(f.read())
+    assert(snapshot == file_dict)
