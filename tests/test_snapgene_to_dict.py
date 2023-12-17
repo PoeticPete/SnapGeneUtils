@@ -23,4 +23,3 @@ def test_snapgene_file_to_dict_complex(tmpdir):
     with open(snapshot_file) as f:
         snapshot = json.loads(f.read())
     assert(snapshot == file_dict)
-    # assert(1==2)
