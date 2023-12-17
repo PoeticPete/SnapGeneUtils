@@ -1,6 +1,6 @@
 """
 setup.py
-install snapgene_reader by pip
+install snapgene_utils by pip
 """
 from setuptools import find_packages, setup
 

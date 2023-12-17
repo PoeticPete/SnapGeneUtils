@@ -3,7 +3,7 @@ import os
 
 from Bio import SeqIO
 
-from snapgene_reader import snapgene_file_to_dict
+from snapgene_utils import snapgene_file_to_dict
 
 TEST_DIR = os.path.join("tests", "test_samples")
 SNAPSHOT_DIR = os.path.join("tests", "snapshots")

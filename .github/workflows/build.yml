@@ -21,7 +21,7 @@ jobs:
           pip install -e .
       - name: Test with pytest
         run: |
-          python -m pytest --cov snapgene_reader --cov-report term-missing
+          python -m pytest --cov snapgene_utils --cov-report term-missing
       - name: Coveralls
         run: coveralls
         env:

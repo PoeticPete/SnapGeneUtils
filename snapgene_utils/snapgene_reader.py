@@ -1,5 +1,5 @@
 """
-snapgene reader main file
+snapgene utils main file
 """
 import struct
 
@@ -309,12 +309,12 @@ def snapgene_file_to_gbk(read_file_object, write_file_object):
             reference_count, analyse_gs(data, "dna", "length")
         )
     )
-    wfo.write("  AUTHORS   SnapGeneReader\n")
+    wfo.write("  AUTHORS   SnapGeneUtils\n")
     wfo.write("  TITLE     Direct Submission\n")
     wfo.write(
         (
             "  JOURNAL   Exported Monday, Sep 05, 2020 from SnapGene File\
- Reader\n"
+ Utils\n"
         )
     )
     wfo.write(
