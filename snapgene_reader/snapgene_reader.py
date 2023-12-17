@@ -121,7 +121,10 @@ def snapgene_file_to_dict(filepath=None, fileobject=None):
                 length=block_size - 1,
             )
             data["seq"] = fileobject.read(block_size - 1).decode("ascii")
-
+        elif ord(next_byte) == 5:
+            block_content = fileobject.read(block_size).decode("utf-8")
+            primers_dict = parse_dict(xmltodict.parse(block_content))
+            data["primers"] = primers_dict["Primers"]
         elif ord(next_byte) == 6:
             # READ THE NOTES
             block_content = fileobject.read(block_size).decode("utf-8")

@@ -67,6 +67,46 @@
         "length": 720
     },
     "seq": "ATGGTGAGCAAGGGCGCCGAGCTGTTCACCGGCATCGTGCCCATCCTGATCGAGCTGAATGGCGATGTGAATGGCCACAAGTTCAGCGTGAGCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACCGGCAAGCTGCCTGTGCCCTGGCCCACCCTGGTGACCACCCTGAGCTACGGCGTGCAGTGCTTCTCACGCTACCCCGATCACATGAAGCAGCACGACTTCTTCAAGAGCGCCATGCCTGAGGGCTACATCCAGGAGCGCACCATCTTCTTCGAGGATGACGGCAACTACAAGTCGCGCGCCGAGGTGAAGTTCGAGGGCGATACCCTGGTGAATCGCATCGAGCTGACCGGCACCGATTTCAAGGAGGATGGCAACATCCTGGGCAATAAGATGGAGTACAACTACAACGCCCACAATGTGTACATCATGACCGACAAGGCCAAGAATGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGATGGCAGCGTGCAGCTGGCCGACCACTACCAGCAGAATACCCCCATCGGCGATGGCCCTGTGCTGCTGCCCGATAACCACTACCTGTCCACCCAGAGCGCCCTGTCCAAGGACCCCAACGAGAAGCGCGATCACATGATCTACTTCGGCTTCGTGACCGCCGCCGCCATCACCCACGGCATGGATGAGCTGTACAAGTGA",
+    "primers": {
+        "@nextValidID": "1",
+        "HybridizationParams": {
+            "@minContinuousMatchLen": "10",
+            "@allowMismatch": "1",
+            "@minMeltingTemperature": "40",
+            "@showAdditionalFivePrimeMatches": "1",
+            "@minimumFivePrimeAnnealing": "15"
+        },
+        "Primer": {
+            "@recentID": "0",
+            "@name": "Primer 1",
+            "@sequence": "GGCGATGGCCCTGTGCTGCT",
+            "@description": "",
+            "@dateAdded": "2023-12-17T02:46:07Z",
+            "BindingSite": [
+                {
+                    "@location": "567-586",
+                    "@boundStrand": "0",
+                    "@annealedBases": "GGCGATGGCCCTGTGCTGCT",
+                    "@meltingTemperature": "67",
+                    "Component": {
+                        "@hybridizedRange": "567-586",
+                        "@bases": "GGCGATGGCCCTGTGCTGCT"
+                    }
+                },
+                {
+                    "@simplified": "1",
+                    "@location": "567-586",
+                    "@boundStrand": "0",
+                    "@annealedBases": "GGCGATGGCCCTGTGCTGCT",
+                    "@meltingTemperature": "67",
+                    "Component": {
+                        "@hybridizedRange": "567-586",
+                        "@bases": "GGCGATGGCCCTGTGCTGCT"
+                    }
+                }
+            ]
+        }
+    },
     "notes": {
         "UUID": "12043859-7888-4c2d-99ad-f5cd13d42dae",
         "Type": "Synthetic",
@@ -79,8 +119,8 @@
             "#text": "2012.5.2"
         },
         "LastModified": {
-            "@UTC": "21:19:45",
-            "#text": "2023.12.16"
+            "@UTC": "2:46:7",
+            "#text": "2023.12.17"
         },
         "CreatedBy": "Clontech (TaKaRa)",
         "SequenceClass": "UNA",
