@@ -45,7 +45,7 @@ def parse_dict(obj):
     return obj
 
 
-def snapgene_file_to_dict(filepath=None, fileobject=None):
+def snapgene_file_to_raw_dict(filepath=None, fileobject=None):
     """Return a dictionary containing the data from a ``*.dna`` file.
 
     Parameters
@@ -130,73 +130,12 @@ def snapgene_file_to_dict(filepath=None, fileobject=None):
             # READ THE NOTES
             block_content = fileobject.read(block_size).decode("utf-8")
             note_data = parse_dict(xmltodict.parse(block_content))
-            data["notes"] = note_data["Notes"]
+            data["Notes"] = note_data["Notes"]
         elif ord(next_byte) == 10:
             # READ THE FEATURES
-            strand_dict = {"0": ".", "1": "+", "2": "-", "3": "="}
-            format_dict = {"@text": parse, "@int": int}
-            features_data = xmltodict.parse(fileobject.read(block_size))
-            features = features_data["Features"]["Feature"]
-            if not isinstance(features, list):
-                features = [features]
-            for feature in features:
-                segments = feature["Segment"]
-                if not isinstance(segments, list):
-                    segments = [segments]
-                segments_ranges = [
-                    sorted([int(e) for e in segment["@range"].split("-")])
-                    for segment in segments
-                ]
-                qualifiers = feature.get("Q", [])
-                if not isinstance(qualifiers, list):
-                    qualifiers = [qualifiers]
-                parsed_qualifiers = {}
-                for qualifier in qualifiers:
-                    if qualifier["V"] is None:
-                        pass
-                    elif isinstance(qualifier["V"], list):
-                        if len(qualifier["V"][0].items()) == 1:
-                            parsed_qualifiers[qualifier["@name"]] = l_v = []
-                            for e_v in qualifier["V"]:
-                                fmt, value = e_v.popitem()
-                                fmt = format_dict.get(fmt, parse)
-                                l_v.append(fmt(value))
-                        else:
-                            parsed_qualifiers[qualifier["@name"]] = d_v = {}
-                            for e_v in qualifier["V"]:
-                                (fmt1, value1), (_, value2) = e_v.items()
-                                fmt = format_dict.get(fmt1, parse)
-                                d_v[value2] = fmt(value1)
-                    else:
-                        fmt, value = qualifier["V"].popitem()
-                        fmt = format_dict.get(fmt, parse)
-                        parsed_qualifiers[qualifier["@name"]] = fmt(value)
-
-                if "label" not in parsed_qualifiers:
-                    parsed_qualifiers["label"] = feature["@name"]
-                if "note" not in parsed_qualifiers:
-                    parsed_qualifiers["note"] = []
-                if not isinstance(parsed_qualifiers["note"], list):
-                    parsed_qualifiers["note"] = [parsed_qualifiers["note"]]
-                color = segments[0]["@color"]
-                parsed_qualifiers["note"].append("color: " + color)
-
-                data["features"].append(
-                    dict(
-                        start=min([start - 1 for (start, end) in segments_ranges]),
-                        end=max([end for (start, end) in segments_ranges]),
-                        strand=strand_dict[feature.get("@directionality", "0")],
-                        type=feature["@type"],
-                        name=feature["@name"],
-                        color=segments[0]["@color"],
-                        textColor="black",
-                        segments=segments,
-                        row=0,
-                        isOrf=False,
-                        qualifiers=parsed_qualifiers,
-                    )
-                )
-
+            block_content = fileobject.read(block_size).decode("utf-8")
+            feature_data = parse_dict(xmltodict.parse(block_content))
+            data["Features"] = feature_data["Features"]
         else:
             b = fileobject.read(block_size)
             data["unparsedSections"][str(ord(next_byte))] = b.hex()
@@ -218,7 +157,7 @@ def snapgene_file_to_seqrecord(filepath=None, fileobject=None):
         On object-like pointing to the data of a .dna file created with
         SnapGene.
     """
-    data = snapgene_file_to_dict(filepath=filepath, fileobject=fileobject)
+    data = snapgene_file_to_raw_dict(filepath=filepath, fileobject=fileobject)
     strand_dict = {"+": 1, "-": -1, ".": 0}
 
     if has_dna_alphabet:
@@ -264,7 +203,7 @@ def snapgene_file_to_gbk(read_file_object, write_file_object):
                 return kwargs["default"]
         return dic
 
-    data = snapgene_file_to_dict(fileobject=read_file_object)
+    data = snapgene_file_to_raw_dict(fileobject=read_file_object)
     wfo = write_file_object
     wfo.write(
         (

@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="snapgene_utils",
-    version="0.2.0",
+    version="0.2.1",
     author="poeticpete",
     maintainer="petertao",
     description="Convert Snapgene *.dna files dict/json/biopython.",
