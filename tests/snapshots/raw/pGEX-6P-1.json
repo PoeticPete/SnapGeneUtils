@@ -406,7 +406,7 @@
             }
         ]
     },
-    "primers": {
+    "Primers": {
         "@nextValidID": "2",
         "HybridizationParams": {
             "@minContinuousMatchLen": "10",

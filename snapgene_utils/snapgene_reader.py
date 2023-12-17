@@ -260,7 +260,7 @@ def snapgene_file_to_seqrecord(filepath=None, fileobject=None):
             )
             for feature in data["features"]
         ],
-        annotations=dict(topology=data["dna"]["topology"], **data["notes"]),
+        annotations=dict(topology=data["dna"]["topology"], **data["Notes"]),
     )
 
     seqrecord.annotations["molecule_type"] = "DNA"
