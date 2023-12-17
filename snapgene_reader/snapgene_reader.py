@@ -78,6 +78,7 @@ def snapgene_file_to_dict(filepath=None, fileobject=None):
         exportVersion=unpack(2, "H"),
         importVersion=unpack(2, "H"),
         features=[],
+        unparsedSections={} # section number -> hex bytes
     )
 
     while True:
@@ -130,7 +131,6 @@ def snapgene_file_to_dict(filepath=None, fileobject=None):
             block_content = fileobject.read(block_size).decode("utf-8")
             note_data = parse_dict(xmltodict.parse(block_content))
             data["notes"] = note_data["Notes"]
-
         elif ord(next_byte) == 10:
             # READ THE FEATURES
             strand_dict = {"0": ".", "1": "+", "2": "-", "3": "="}
@@ -198,8 +198,8 @@ def snapgene_file_to_dict(filepath=None, fileobject=None):
                 )
 
         else:
-            # WE IGNORE THE WHOLE BLOCK
-            fileobject.read(block_size)
+            b = fileobject.read(block_size)
+            data["unparsedSections"][str(ord(next_byte))] = b.hex()
             pass
 
     fileobject.close()
