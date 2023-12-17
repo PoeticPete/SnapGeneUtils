@@ -1,6 +1,7 @@
 """
 snapgene utils main file
 """
+import re
 import struct
 
 # import json
@@ -43,6 +44,85 @@ def parse_dict(obj):
             elif isinstance(obj[key], dict):
                 parse_dict(obj[key])
     return obj
+
+
+def to_pretty_snake(s):
+    """
+    Converts a string to lower snake case. Also removes leading '@', and '_'.
+    """
+    substituted = s
+    if len(substituted) > 0 and substituted[0] == "@":
+        substituted = substituted[1:]
+    substituted = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', substituted)
+    substituted = re.sub('([a-z0-9])([A-Z])', r'\1_\2', substituted).lower()
+    if len(substituted) > 0 and substituted[0] == "_":
+        substituted = substituted[1:]
+    return substituted
+
+
+def parse_qualifier_dict(raw_qualifier_dict):
+    """
+    Parses qualifier dicts, as opposed to lists.
+    """
+    value_obj = raw_qualifier_dict["V"]
+    value = None
+    if "@int" in value_obj:
+        value = int(value_obj["@int"])
+    elif "@text" in value_obj:
+        value = str(value_obj["@text"])
+    if value is None:
+        raise ValueError(f"Only @int and @text are supported qualifier types. Found an unsupported qualifier type: {raw_qualifier_dict}.")
+    return {raw_qualifier_dict["@name"]: value}
+    
+
+
+def to_pretty_qualifiers(raw_qualifier_obj):
+    """
+    "Q" keys represent qualifiers. They can be dicts or lists. This function prettifies the format. To standardize things, this will always return a list.
+
+    Here's an example:
+    {
+      "Q": {
+        "@name": "gene",
+        "V": {
+          "@text": "foo bar baz"
+        }
+      }
+    }
+
+    Here's the output:
+    [{
+      "gene": "foo bar baz"
+    }]
+    """
+    if isinstance(raw_qualifier_obj, dict):
+        return [parse_qualifier_dict(raw_qualifier_obj)]
+    elif isinstance(raw_qualifier_obj, list):
+        return [
+            parse_qualifier_dict(raw_qualifier_dict) for raw_qualifier_dict in raw_qualifier_obj
+        ]
+    else:
+        raise ValueError(f".dna qualifier objects are only dicts or lists. Unsupported type found: {raw_qualifier_obj}")
+
+
+def to_pretty_dict(d):
+    if isinstance(d, list):
+        return [to_pretty_dict(i) if isinstance(i, (dict, list)) else i for i in d]
+    
+    res = {}
+    for a, b in d.items():
+        if a == "Q":
+            res["qualifiers"] = to_pretty_qualifiers(b)
+        elif isinstance(b, (dict, list)):
+            res[to_pretty_snake(a)] = to_pretty_dict(b)
+        else:
+            res[to_pretty_snake(a)] = b
+    return res
+
+
+def snapgene_file_to_dict(filepath=None, fileobject=None):
+    raw_dict = snapgene_file_to_raw_dict(filepath, fileobject)
+    return to_pretty_dict(raw_dict)
 
 
 def snapgene_file_to_raw_dict(filepath=None, fileobject=None):
