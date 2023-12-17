@@ -34,6 +34,16 @@ Test with Pytest:
 
     pytest --cov=snapgene_reader tests/
 
+Development
+------------
+.. code:: bash
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -e .
+    pip install -r requirements_dev.txt
+
+    ## Run tests
+    ./venv/bin/pytest tests/
 
 Licence = MIT
 -------------

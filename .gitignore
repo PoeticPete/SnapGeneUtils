@@ -46,3 +46,6 @@ nosetests.xml
 
 .pypirc
 .cache
+
+.DS_Store
+venv

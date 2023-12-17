@@ -1,6 +1,8 @@
-from snapgene_reader import snapgene_file_to_seqrecord, snapgene_file_to_gbk
-from Bio import SeqIO
 import os
+
+from Bio import SeqIO
+
+from snapgene_reader import snapgene_file_to_gbk, snapgene_file_to_seqrecord
 
 TEST_DIR = os.path.join("tests", "test_samples")
 
