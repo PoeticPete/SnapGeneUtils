@@ -209,12 +209,12 @@
                 "@recentID": "4",
                 "@name": "GST",
                 "@directionality": "1",
-                "@translationMW": "25498.76",
                 "@type": "CDS",
                 "@allowSegmentOverlaps": "0",
                 "@consecutiveTranslationNumbering": "1",
                 "@maxRunOn": "992",
                 "@maxFusedRunOn": "992",
+                "@prioritize": "1",
                 "Segment": {
                     "@range": "258-911",
                     "@color": "#cc99b2",
@@ -488,8 +488,8 @@
             "#text": "1996.12.3"
         },
         "LastModified": {
-            "@UTC": "6:0:0",
-            "#text": "2013.12.3"
+            "@UTC": "19:45:26",
+            "#text": "2023.12.17"
         },
         "AccessionNumber": "U78872",
         "CreatedBy": "GE Healthcare",
