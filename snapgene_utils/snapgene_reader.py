@@ -50,6 +50,12 @@ def to_pretty_snake(s):
     """
     Converts a string to lower snake case. Also removes leading '@', and '_'.
     """
+    hardcoded_substitutions = {
+        "Features": "features_container",
+        "Feature": "features",
+    }
+    if s in hardcoded_substitutions:
+        return hardcoded_substitutions[s]
     substituted = s
     if len(substituted) > 0 and substituted[0] == "@":
         substituted = substituted[1:]
