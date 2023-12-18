@@ -32,12 +32,15 @@
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
                 "hits_stop_codon": "1",
-                "segment": {
-                    "range": "1-720",
-                    "color": "#05fd14",
-                    "type": "standard",
-                    "translated": "1"
-                },
+                "segments": [
+                    {
+                        "start": "1",
+                        "end": "720",
+                        "color": "#05fd14",
+                        "type": "standard",
+                        "translated": "1"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "codon_start": 1
@@ -62,11 +65,14 @@
                 "type": "misc_feature",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "617-655",
-                    "color": "#a6acb3",
-                    "type": "standard"
-                }
+                "segments": [
+                    {
+                        "start": "617",
+                        "end": "655",
+                        "color": "#a6acb3",
+                        "type": "standard"
+                    }
+                ]
             }
         ]
     },

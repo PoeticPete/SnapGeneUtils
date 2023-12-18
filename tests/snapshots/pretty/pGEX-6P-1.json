@@ -29,11 +29,14 @@
                 "type": "misc_feature",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "940-981",
-                    "color": "#99ccff",
-                    "type": "standard"
-                },
+                "segments": [
+                    {
+                        "start": "940",
+                        "end": "981",
+                        "color": "#99ccff",
+                        "type": "standard"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "note": "<html><body>multiple cloning site</body></html>"
@@ -51,12 +54,15 @@
                 "consecutive_translation_numbering": "1",
                 "max_run_on": "992",
                 "max_fused_run_on": "992",
-                "segment": {
-                    "range": "918-941",
-                    "color": "#cc99b2",
-                    "type": "standard",
-                    "translated": "1"
-                },
+                "segments": [
+                    {
+                        "start": "918",
+                        "end": "941",
+                        "color": "#cc99b2",
+                        "type": "standard",
+                        "translated": "1"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "codon_start": 1
@@ -82,12 +88,15 @@
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
                 "hits_stop_codon": "1",
-                "segment": {
-                    "range": "3333-4415",
-                    "color": "#993366",
-                    "type": "standard",
-                    "translated": "1"
-                },
+                "segments": [
+                    {
+                        "start": "3333",
+                        "end": "4415",
+                        "color": "#993366",
+                        "type": "standard",
+                        "translated": "1"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "codon_start": 1
@@ -119,16 +128,18 @@
                 "cleavage_arrows": "1460",
                 "consecutive_translation_numbering": "1",
                 "hits_stop_codon": "1",
-                "segment": [
+                "segments": [
                     {
                         "name": "signal sequence",
-                        "range": "1392-1460",
+                        "start": "1392",
+                        "end": "1460",
                         "color": "#ccffcc",
                         "type": "standard",
                         "translated": "1"
                     },
                     {
-                        "range": "1461-2252",
+                        "start": "1461",
+                        "end": "2252",
                         "color": "#ccffcc",
                         "type": "standard",
                         "translated": "1"
@@ -165,12 +176,15 @@
                 "max_run_on": "992",
                 "max_fused_run_on": "992",
                 "prioritize": "1",
-                "segment": {
-                    "range": "258-911",
-                    "color": "#cc99b2",
-                    "type": "standard",
-                    "translated": "1"
-                },
+                "segments": [
+                    {
+                        "start": "258",
+                        "end": "911",
+                        "color": "#cc99b2",
+                        "type": "standard",
+                        "translated": "1"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "codon_start": 1
@@ -196,11 +210,14 @@
                 "type": "rep_origin",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "2423-3011",
-                    "color": "#ffff00",
-                    "type": "standard"
-                },
+                "segments": [
+                    {
+                        "start": "2423",
+                        "end": "3011",
+                        "color": "#ffff00",
+                        "type": "standard"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "direction": "RIGHT"
@@ -217,11 +234,14 @@
                 "type": "promoter",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "1287-1391",
-                    "color": "#ffffff",
-                    "type": "standard"
-                },
+                "segments": [
+                    {
+                        "start": "1287",
+                        "end": "1391",
+                        "color": "#ffffff",
+                        "type": "standard"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "gene": "<html><body><i>bla</i></body></html>"
@@ -235,11 +255,14 @@
                 "type": "promoter",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "3255-3332",
-                    "color": "#ffffff",
-                    "type": "standard"
-                },
+                "segments": [
+                    {
+                        "start": "3255",
+                        "end": "3332",
+                        "color": "#ffffff",
+                        "type": "standard"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "gene": "<html><body><i>lacI</i> (mutant)</body></html>"
@@ -256,21 +279,24 @@
                 "type": "misc_feature",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": [
+                "segments": [
                     {
                         "name": "-35",
-                        "range": "183-188",
+                        "start": "183",
+                        "end": "188",
                         "color": "#ffffff",
                         "type": "standard"
                     },
                     {
-                        "range": "189-204",
+                        "start": "189",
+                        "end": "204",
                         "color": "#ffffff",
                         "type": "standard"
                     },
                     {
                         "name": "-10",
-                        "range": "205-211",
+                        "start": "205",
+                        "end": "211",
                         "color": "#ffffff",
                         "type": "standard"
                     }
@@ -287,11 +313,14 @@
                 "type": "protein_bind",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "219-235",
-                    "color": "#31849b",
-                    "type": "standard"
-                },
+                "segments": [
+                    {
+                        "start": "219",
+                        "end": "235",
+                        "color": "#31849b",
+                        "type": "standard"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "bound_moiety": "<html><body><i>lac</i> repressor encoded by <i>lacI</i></body></html>"
@@ -307,11 +336,14 @@
                 "type": "misc_feature",
                 "allow_segment_overlaps": "0",
                 "consecutive_translation_numbering": "1",
-                "segment": {
-                    "range": "986-996",
-                    "color": "#ff0000",
-                    "type": "standard"
-                },
+                "segments": [
+                    {
+                        "start": "986",
+                        "end": "996",
+                        "color": "#ff0000",
+                        "type": "standard"
+                    }
+                ],
                 "qualifiers": [
                     {
                         "note": "<html><body>stop codons in all three reading frames</body></html>"

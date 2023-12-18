@@ -110,6 +110,28 @@ def to_pretty_qualifiers(raw_qualifier_obj):
     else:
         raise ValueError(f".dna qualifier objects are only dicts or lists. Unsupported type found: {raw_qualifier_obj}")
 
+def parse_segment_dict(raw_segment_dict):
+    res = {}
+    for a, b in raw_segment_dict.items():
+        if isinstance(b, (dict, list)):
+            res[to_pretty_snake(a)] = to_pretty_dict(b)
+        else:
+            if a == "@range":
+                res["start"] = b.split("-")[0]
+                res["end"] = b.split("-")[1]
+            else:
+                res[to_pretty_snake(a)] = b
+    return res
+
+def to_pretty_segments(raw_segment_obj):
+    if isinstance(raw_segment_obj, dict):
+        return [parse_segment_dict(raw_segment_obj)]
+    elif isinstance(raw_segment_obj, list):
+        return [
+            parse_segment_dict(raw_qualifier_dict) for raw_qualifier_dict in raw_segment_obj
+        ]
+    else:
+        raise ValueError(f".dna segment objects are only dicts or lists. Unsupported type found: {raw_segment_obj}")
 
 def to_pretty_dict(d):
     if isinstance(d, list):
@@ -119,6 +141,8 @@ def to_pretty_dict(d):
     for a, b in d.items():
         if a == "Q":
             res["qualifiers"] = to_pretty_qualifiers(b)
+        elif a == "Segment":
+            res["segments"] = to_pretty_segments(b)
         elif isinstance(b, (dict, list)):
             res[to_pretty_snake(a)] = to_pretty_dict(b)
         else:
