@@ -157,7 +157,6 @@ def snapgene_file_to_raw_dict(filepath=None, fileobject=None):
         isDNA=unpack(2, "H"),
         exportVersion=unpack(2, "H"),
         importVersion=unpack(2, "H"),
-        features=[],
         unparsedSections={} # section number -> hex bytes
     )
 
@@ -237,7 +236,7 @@ def snapgene_file_to_seqrecord(filepath=None, fileobject=None):
         On object-like pointing to the data of a .dna file created with
         SnapGene.
     """
-    data = snapgene_file_to_raw_dict(filepath=filepath, fileobject=fileobject)
+    data = snapgene_file_to_dict(filepath=filepath, fileobject=fileobject)
     strand_dict = {"+": 1, "-": -1, ".": 0}
 
     if has_dna_alphabet:
@@ -258,7 +257,7 @@ def snapgene_file_to_seqrecord(filepath=None, fileobject=None):
                 type=feature["type"],
                 qualifiers=feature["qualifiers"],
             )
-            for feature in data["features"]
+            for feature in data["features"]["feature"]
         ],
         annotations=dict(topology=data["dna"]["topology"], **data["Notes"]),
     )
@@ -349,7 +348,7 @@ def snapgene_file_to_gbk(read_file_object, write_file_object):
     )
     wfo.write("FEATURES             Location/Qualifiers\n")
 
-    features = analyse_gs(data, "features")
+    features = analyse_gs(data, "Features")
     for feature in features:
         strand = analyse_gs(feature, "strand", default="")
 
