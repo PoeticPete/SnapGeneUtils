@@ -135,5 +135,6 @@
         "sequence_class": "UNA",
         "transformed_into": "Unspecified",
         "comments": "Mammalian codon-optimized."
-    }
+    },
+    "name": "AcGFP1"
 }

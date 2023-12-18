@@ -3,8 +3,8 @@ snapgene utils main file
 """
 import re
 import struct
+from pathlib import Path
 
-# import json
 import xmltodict
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
@@ -152,7 +152,9 @@ def to_pretty_dict(d):
 
 def snapgene_file_to_dict(filepath=None, fileobject=None):
     raw_dict = snapgene_file_to_raw_dict(filepath, fileobject)
-    return to_pretty_dict(raw_dict)
+    pretty_dict = to_pretty_dict(raw_dict)
+    pretty_dict["name"] = Path(filepath).stem
+    return pretty_dict
 
 
 def snapgene_file_to_raw_dict(filepath=None, fileobject=None):

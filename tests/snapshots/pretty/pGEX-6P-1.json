@@ -442,5 +442,6 @@
         "organism": "Escherichia coli",
         "sequence_class": "UNA",
         "transformed_into": "Unspecified"
-    }
+    },
+    "name": "pGEX-6P-1"
 }
