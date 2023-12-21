@@ -72,6 +72,8 @@ def parse_qualifier_dict(raw_qualifier_dict):
     """
     value_obj = raw_qualifier_dict["V"]
     value = None
+    if not value_obj:
+        return {raw_qualifier_dict["@name"]: None}
     if "@int" in value_obj:
         value = int(value_obj["@int"])
     elif "@text" in value_obj:

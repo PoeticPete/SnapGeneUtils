@@ -44,3 +44,11 @@ def test_snapgene_file_to_dict_complex(tmpdir):
     with open(snapshot_file) as f:
         snapshot = json.loads(f.read())
     assert(snapshot == file_dict)
+
+def test_null_translation(tmpdir):
+    test_file = os.path.join(TEST_DIR, "file_with_null_translation.dna")
+    snapshot_file = os.path.join(PRETTY_SNAPSHOT_DIR, "file_with_null_translation.json")
+    file_dict = snapgene_file_to_dict(test_file)
+    with open(snapshot_file) as f:
+        snapshot = json.loads(f.read())
+    assert(snapshot == file_dict)
